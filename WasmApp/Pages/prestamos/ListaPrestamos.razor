@@ -1,0 +1,51 @@
+
+@page "/prestamos"
+
+@inherits ListaPrestamoBase
+
+<PageTitle>Listado de prestamos</PageTitle>
+
+<h3>Lista prestamos</h3>
+
+<div class="mb-3">
+    <button class="btn btn-danger" @onclick="NavigateToCreate">
+        <i class="fa fa-plus pr-2"></i> Crear Nuevo prestamos
+    </button>
+</div>
+
+@if (!prestamos.Any())
+{
+    <button class="btn btn-primary" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span class="visually-hidden">Loading...</span>
+    </button>
+}
+
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Bombero</th>
+                <th>estado</th>
+                <th>fechaPrestamo</th>
+                <th>fechaDevolucion</th>
+                <th>observaciones</th>
+                
+            </tr>
+        </thead>
+        <tbody>            
+            @foreach (var elemento in prestamos)
+            {
+                <tr @onclick="()=> NavigateToDetails(elemento.id)" class="cursor-pointer">
+                    <td>@elemento.id</td>
+                    <td>@elemento.bombero.nombre</td>
+                    <td>@elemento.estado</td>
+                    <td>@elemento.fechaprestamo</td>
+                    <td>@elemento.fechadevolucion</td>
+                    <td>@elemento.observaciones</td>
+                </tr>
+            }            
+        </tbody>
+    </table>
+}

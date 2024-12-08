@@ -1,0 +1,104 @@
+﻿@page "/infoPrestamo/{Id:int}"
+
+@inherits InfoPrestamosBase
+
+<div class="conteiner d-flex justify-content-center m-0 p-0">
+    @if (isEditMode)
+    {
+        <EditForm Model="@prestamo" OnValidSubmit="@HandleOnValidSubmit" class="col-sm-12 col-md-10 col-lg-8 p-0">
+            <DataAnnotationsValidator />
+            <div class="card">
+                <div class="card-header">
+                    <h3>Lista prestamo - Detalle: @prestamo.id</h3>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                    <label for="ID" class="form-label">ID </label>
+                    <InputNumber id="ID" @bind-Value="prestamo.id" class="form-control" placeholder="ID" />
+                    <ValidationMessage For="@(() => prestamo.id)" />
+                </div>
+                <div class="form-group">
+                    <label for="idBombero" class="form-label">idBombero </label>
+                    <InputNumber id="idBombero" @bind-Value="prestamo.idbombero" class="form-control" placeholder="idBombero" />
+                    <ValidationMessage For="@(() => prestamo.idbombero)" />
+                </div>
+                <div class="form-group">
+                    <label for="estado" class="form-label"> estado </label>
+                    <InputText id="estado" @bind-Value="prestamo.estado" class="form-control" placeholder="estado" />
+                    <ValidationMessage For="@(() => prestamo.estado)" />
+                </div>
+                <div class="form-group">
+                    <label for="fechaPrestamo" class="form-label"> fechaPrestamo </label>
+                    <InputText id="fechaPrestamo" @bind-Value="prestamo.fechaprestamo" class="form-control" placeholder="fechaPrestamo" />
+                    <ValidationMessage For="@(() => prestamo.fechaprestamo)" />
+                </div>
+                <div class="form-group">
+                    <label for="fechaDevolucion" class="form-label"> fechaDevolucion </label>
+                    <InputText id="fechaDevolucion" @bind-Value="prestamo.fechadevolucion" class="form-control" placeholder="fechaDevolucion" />
+                    <ValidationMessage For="@(() => prestamo.fechadevolucion)" />
+                </div>
+                <div class="form-group">
+                    <label for="observaciones" class="form-label"> observaciones </label>
+                    <InputText id="observaciones" @bind-Value="prestamo.observaciones" class="form-control" placeholder="observaciones" />
+                    <ValidationMessage For="@(() => prestamo.observaciones)" />
+                </div>
+                
+                    
+                    <div class="form-group">
+                        <br />
+                        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save pr-2"/> Guardar</button>
+                        <button type="button" class="btn btn-secondary btn-sm" @onclick="ToggleEditMode"><i class="fa fa-times pr-2" /> Volver</button>
+                    </div>
+                </div>
+            </div>
+        </EditForm>
+    }
+    else
+    {
+        <div class="card col-sm-12 col-md-10 col-lg-8 p-0">
+            <div class="card-header">
+                <h3>Lista prestamos - Detalle: @prestamo.idbombero</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="form-label">ID: </label>
+                    <p>@prestamo.id</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">idBombero: </label>
+                    <p>@prestamo.idbombero</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">estado: </label>
+                    <p>@prestamo.estado</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">fechaPrestamo: </label>
+                    <p>@prestamo.fechaprestamo</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">fechaDevolucion: </label>
+                    <p>@prestamo.fechadevolucion</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">observaciones: </label>
+                    <p>@prestamo.observaciones</p>
+                </div>
+                
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-sm" @onclick="ToggleEditMode"><i class="fa fa-edit pr-2" /> Editar</button>
+                    <a href="/prestamos" class="btn btn-secondary btn-sm"><i class="fa fa-times pr-2" /> Volver</a>
+                    <button type="button" class="btn btn-danger btn-sm float-end" @onclick="(async () => await ShowConfirmationModal())"><i class="fa fa-trash pr-2" /> Eliminar</button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (showConfirmation)
+    {
+        <ConfirmDelete Message="@($"Estas seguro de eliminar los datos de {idPrestamo}?")" OnConfirm="OnConfirmDelete" />
+    }
+</div>

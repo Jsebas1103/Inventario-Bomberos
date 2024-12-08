@@ -1,0 +1,51 @@
+
+@page "/elementos"
+
+@inherits ListaElementosBase
+
+<PageTitle>Listado de elemento</PageTitle>
+
+<h3>Lista Elementos</h3>
+
+<div class="mb-3">
+    <button class="btn btn-danger" @onclick="NavigateToCreate">
+        <i class="fa fa-plus pr-2"></i> Crear Nuevo elemento
+    </button>
+</div>
+
+@if (!elementos.Any())
+{
+    <button class="btn btn-primary" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span class="visually-hidden">Loading...</span>
+    </button>
+}
+
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre (C)</th>
+                <th>descripcion</th>
+                <th>estado</th>
+                <th>vida util</th>
+                <th>categoria</th>
+                
+            </tr>
+        </thead>
+        <tbody>            
+            @foreach (var elemento in elementos)
+            {
+                <tr @onclick="()=> NavigateToDetails(elemento.id)" class="cursor-pointer">
+                    <td>@elemento.id</td>
+                    <td>@elemento.nombre</td>
+                    <td>@elemento.descripcion</td>
+                    <td>@elemento.estado</td>
+                    <td>@elemento.vidaUtil</td>
+                    <td>@elemento.categoria.tipo</td>
+                </tr>
+            }            
+        </tbody>
+    </table>
+}

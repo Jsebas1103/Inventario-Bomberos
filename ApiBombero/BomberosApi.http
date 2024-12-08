@@ -1,0 +1,6 @@
+@BomberosApi_HostAddress = http://localhost:5181
+
+GET {{BomberosApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

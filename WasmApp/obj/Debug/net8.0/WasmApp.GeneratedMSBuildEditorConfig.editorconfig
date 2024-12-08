@@ -1,0 +1,103 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = WasmApp
+build_property.RootNamespace = WasmApp
+build_property.ProjectDir = c:\Users\jseba\OneDrive\Documents\Archivos\BOMBEROTES\BOMBEROTES\WasmApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\jseba\OneDrive\Documents\Archivos\BOMBEROTES\BOMBEROTES\WasmApp
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/About.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/bombero/InfoBombero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYm9tYmVyb1xJbmZvQm9tYmVyby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/bombero/ListaBomberos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYm9tYmVyb1xMaXN0YUJvbWJlcm9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/bombero/NuevoBombero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYm9tYmVyb1xOdWV2b0JvbWJlcm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/categoria/InfoCategoria.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY2F0ZWdvcmlhXEluZm9DYXRlZ29yaWEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/categoria/ListaCategorias.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY2F0ZWdvcmlhXExpc3RhQ2F0ZWdvcmlhcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/categoria/NuevaCategoria.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY2F0ZWdvcmlhXE51ZXZhQ2F0ZWdvcmlhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/ConfirmDelete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmlybURlbGV0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/elemento/InfoElemento.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZWxlbWVudG9cSW5mb0VsZW1lbnRvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/elemento/ListaElementos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZWxlbWVudG9cTGlzdGFFbGVtZW50b3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/elemento/NuevoElemento.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZWxlbWVudG9cTnVldm9FbGVtZW50by5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/prestamos/InfoPrestamos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHJlc3RhbW9zXEluZm9QcmVzdGFtb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/prestamos/ListaPrestamos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHJlc3RhbW9zXExpc3RhUHJlc3RhbW9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Pages/prestamos/NuevoPrestamos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHJlc3RhbW9zXE51ZXZvUHJlc3RhbW9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-httzu5lrit
+
+[c:/Users/jseba/OneDrive/Documents/Archivos/BOMBEROTES/BOMBEROTES/WasmApp/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-bsxbnqtp9i

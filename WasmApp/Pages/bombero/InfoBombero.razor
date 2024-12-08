@@ -1,0 +1,123 @@
+﻿@page "/bomberoInfo/{Id:int}"
+
+@inherits InfoBomberoBase
+
+<div class="conteiner d-flex justify-content-center m-0 p-0">
+    @if (isEditMode)
+    {
+        <EditForm Model="@bombero" OnValidSubmit="@HandleOnValidSubmit" class="col-sm-12 col-md-10 col-lg-8 p-0">
+            <DataAnnotationsValidator />
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Lista Bombero - Detalle: @bombero.nombre</h3>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                    <label for="ID" class="form-label">ID </label>
+                    <InputNumber id="ID" @bind-Value="bombero.id" class="form-control" placeholder="ID" />
+                    <ValidationMessage For="@(() => bombero.id)" />
+                </div>
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre </label>
+                    <InputText id="Nombre" @bind-Value="bombero.nombre" class="form-control" placeholder="Nombre" />
+                    <ValidationMessage For="@(() => bombero.nombre)" />
+                </div>
+                <div class="form-group">
+                    <label for="Edad" class="form-label"> Edad </label>
+                    <InputNumber id="Edad" @bind-Value="bombero.edad" class="form-control" placeholder="Edad" />
+                    <ValidationMessage For="@(() => bombero.edad)" />
+                </div>
+                <div class="form-group">
+                    <label for="Direccion" class="form-label"> Direccion </label>
+                    <InputText id="Direccion" @bind-Value="bombero.direccion" class="form-control" placeholder="Direccion" />
+                    <ValidationMessage For="@(() => bombero.direccion)" />
+                </div>
+                <div class="form-group">
+                    <label for="Telefono" class="form-label"> Telefono </label>
+                    <InputText id="Telefono" @bind-Value="bombero.telefono" class="form-control" placeholder="Telefono" />
+                    <ValidationMessage For="@(() => bombero.telefono)" />
+                </div>
+                <div class="form-group">
+                    <label for="Correo" class="form-label"> Correo </label>
+                    <InputText id="Correo" @bind-Value="bombero.correo" class="form-control" placeholder="Correo" />
+                    <ValidationMessage For="@(() => bombero.correo)" />
+                </div>
+                <div class="form-group">
+                    <label for="Contraseña" class="form-label"> Contraseña </label>
+                    <InputText id="Contraseña" @bind-Value="bombero.contraseña" class="form-control" placeholder="Contraseña" />
+                    <ValidationMessage For="@(() => bombero.contraseña)" />
+                </div>
+                <div class="form-group">
+                    <label for="Acceso" class="form-label"> Acceso </label>
+                    <InputText id="Acceso" @bind-Value="bombero.acceso" class="form-control" placeholder="Acceso" />
+                    <ValidationMessage For="@(() => bombero.acceso)" />
+                </div>
+
+                    
+                    <div class="form-group">
+                        <br />
+                        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save pr-2"/> Guardar</button>
+                        <button type="button" class="btn btn-secondary btn-sm" @onclick="ToggleEditMode"><i class="fa fa-times pr-2" /> Volver</button>
+                    </div>
+                </div>
+            </div>
+        </EditForm>
+    }
+    else
+    {
+        <div class="card col-sm-12 col-md-10 col-lg-8 p-0">
+            <div class="card-header">
+                <h3>Lista Bomberos - Detalle: @bombero.nombre</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="form-label">ID: </label>
+                    <p>@bombero.id</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Nombre: </label>
+                    <p>@bombero.nombre</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Edad: </label>
+                    <p>@bombero.edad</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Direccion: </label>
+                    <p>@bombero.direccion</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Telefono: </label>
+                    <p>@bombero.telefono</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Correo: </label>
+                    <p>@bombero.correo</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Contraseña: </label>
+                    <p>@bombero.contraseña</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Acceso: </label>
+                    <p>@bombero.acceso</p>
+                </div>
+                
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-sm" @onclick="ToggleEditMode"><i class="fa fa-edit pr-2" /> Editar</button>
+                    <a href="/bomberos" class="btn btn-secondary btn-sm"><i class="fa fa-times pr-2" /> Volver</a>
+                    <button type="button" class="btn btn-danger btn-sm float-end" @onclick="(async () => await ShowConfirmationModal())"><i class="fa fa-trash pr-2" /> Eliminar</button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (showConfirmation)
+    {
+        <ConfirmDelete Message="@($"Estas seguro de eliminar los datos de {bomberoName}?")" OnConfirm="OnConfirmDelete" />
+    }
+</div>

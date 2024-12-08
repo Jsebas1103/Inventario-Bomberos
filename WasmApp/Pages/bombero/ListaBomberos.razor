@@ -1,0 +1,54 @@
+﻿
+@page "/bomberos"
+
+@inherits ListaBomberosBase
+
+<PageTitle>Listado de Bomberos</PageTitle>
+
+<h3>Lista Bomberos</h3>
+
+<div class="mb-3">
+    <button class="btn btn-danger" @onclick="NavigateToCreate">
+        <i class="fa fa-plus pr-2"></i> Crear Nuevo Bombero
+    </button>
+</div>
+
+@if (!bomberosList.Any())
+{
+    <button class="btn btn-primary" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span class="visually-hidden">Loading...</span>
+    </button>
+}
+
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre (C)</th>
+                <th>Edad</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Correo</th>
+                <th>contraseña</th>
+                <th>Acceso</th>
+            </tr>
+        </thead>
+        <tbody>            
+            @foreach (var bombero in bomberosList)
+            {
+                <tr @onclick="()=> NavigateToDetails(bombero.id)" class="cursor-pointer">
+                    <td>@bombero.id</td>
+                    <td>@bombero.nombre</td>
+                    <td>@bombero.edad</td>
+                    <td>@bombero.direccion</td>
+                    <td>@bombero.telefono</td>
+                    <td>@bombero.correo</td>
+                    <td>@bombero.contraseña</td>
+                    <td>@bombero.acceso</td>
+                </tr>
+            }            
+        </tbody>
+    </table>
+}

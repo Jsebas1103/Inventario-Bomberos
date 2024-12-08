@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\obj\\Debug\\net8.0\\compressed\\xrxr2zaopz.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WasmApp.styles.css",
+      "PackagePath": "staticwebassets\\WasmApp.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\images\\Categoria.jpg",
+      "PackagePath": "staticwebassets\\images\\Categoria.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\images\\Prestamos.jpg",
+      "PackagePath": "staticwebassets\\images\\Prestamos.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\images\\event1.jpg",
+      "PackagePath": "staticwebassets\\images\\event1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\images\\event2.jpg",
+      "PackagePath": "staticwebassets\\images\\event2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\images\\event3.jpg",
+      "PackagePath": "staticwebassets\\images\\event3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\images\\hacha y extintor.jpg",
+      "PackagePath": "staticwebassets\\images\\hacha y extintor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\images\\university.png",
+      "PackagePath": "staticwebassets\\images\\university.png"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\images\\web-development.jpg",
+      "PackagePath": "staticwebassets\\images\\web-development.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jseba\\OneDrive\\Documents\\Archivos\\BOMBEROTES\\BOMBEROTES\\WasmApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WasmApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WasmApp.props",
+      "PackagePath": "build\\WasmApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WasmApp.props",
+      "PackagePath": "buildMultiTargeting\\WasmApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WasmApp.props",
+      "PackagePath": "buildTransitive\\WasmApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

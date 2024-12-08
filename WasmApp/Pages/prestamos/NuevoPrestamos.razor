@@ -1,0 +1,53 @@
+﻿@page "/nuevoPrestamo"
+
+@inherits NuevoPrestamoBase;
+
+<div class="conteiner d-flex justify-content-center m-0 p-0">
+    <EditForm Model="@prestamo" OnValidSubmit="@HandleOnValidSubmit" class="col-sm-12 col-md-10 col-lg-8 p-0">
+        <DataAnnotationsValidator/>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Crear Nuevo prestamo</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="ID" class="form-label">ID </label>
+                    <InputNumber id="ID" @bind-Value="prestamo.id" class="form-control" placeholder="ID" />
+                    <ValidationMessage For="@(() => prestamo.id)" />
+                </div>
+                <div class="form-group">
+                    <label for="idbombero" class="form-label">idbombero </label>
+                    <InputNumber id="idbombero" @bind-Value="prestamo.idbombero" class="form-control" placeholder="idbombero" />
+                    <ValidationMessage For="@(() => prestamo.idbombero)" />
+                </div>
+                <div class="form-group">
+                    <label for="estado" class="form-label"> estado </label>
+                    <InputText id="estado" @bind-Value="prestamo.estado" class="form-control" placeholder="estado" />
+                    <ValidationMessage For="@(() => prestamo.estado)" />
+                </div>
+                <div class="form-group">
+                    <label for="fechaprestamo" class="form-label"> fechaprestamo </label>
+                    <InputText id="fechaprestamo" @bind-Value="prestamo.fechaprestamo" class="form-control" placeholder="fechaprestamo" />
+                    <ValidationMessage For="@(() => prestamo.fechaprestamo)" />
+                </div>
+                <div class="form-group">
+                    <label for="fechadevolucion" class="form-label"> fechadevolucion </label>
+                    <InputText id="fechadevolucion" @bind-Value="prestamo.fechadevolucion" class="form-control" placeholder="fechadevolucion" />
+                    <ValidationMessage For="@(() => prestamo.fechadevolucion)" />
+                </div>
+                <div class="form-group">
+                    <label for="observaciones" class="form-label"> observaciones </label>
+                    <InputText id="observaciones" @bind-Value="prestamo.observaciones" class="form-control" placeholder="observaciones" />
+                    <ValidationMessage For="@(() => prestamo.observaciones)" />
+                </div>
+                <div class="form-group">
+                    <br/>
+                    <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-plus pr-2" /> Crear</button>
+                    <a href="/prestamos" class="btn btn-secondary btn-sm"><i class="fa fa-times pr-2" /> Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </EditForm>
+</div>

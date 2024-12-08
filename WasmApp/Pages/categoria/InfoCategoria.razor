@@ -1,0 +1,70 @@
+﻿@page "/infoCategoria/{Id:int}"
+
+@inherits InfoCategoriaBase
+
+<div class="conteiner d-flex justify-content-center m-0 p-0">
+    @if (isEditMode)
+    {
+        <EditForm Model="@categoria" OnValidSubmit="@HandleOnValidSubmit" class="col-sm-12 col-md-10 col-lg-8 p-0">
+            <DataAnnotationsValidator />
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Lista categoria - Detalle: @categoria.tipo</h3>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                    <label for="ID" class="form-label">ID </label>
+                    <InputNumber id="ID" @bind-Value="categoria.id" class="form-control" placeholder="ID" />
+                    <ValidationMessage For="@(() => categoria.id)" />
+                </div>
+                <div class="form-group">
+                    <label for="tipo" class="form-label">Tipo </label>
+                    <InputText id="tipo" @bind-Value="categoria.tipo" class="form-control" placeholder="tipo" />
+                    <ValidationMessage For="@(() => categoria.tipo)" />
+                </div>
+                
+                    
+                    <div class="form-group">
+                        <br />
+                        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save pr-2"/> Guardar</button>
+                        <button type="button" class="btn btn-secondary btn-sm" @onclick="ToggleEditMode"><i class="fa fa-times pr-2" /> Volver</button>
+                    </div>
+                </div>
+            </div>
+        </EditForm>
+    }
+    else
+    {
+        <div class="card col-sm-12 col-md-10 col-lg-8 p-0">
+            <div class="card-header">
+                <h3>Lista categorias - Detalle: @categoria.id</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="form-label">ID: </label>
+                    <p>@categoria.id</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Tipo: </label>
+                    <p>@categoria.tipo</p>
+                </div>
+
+
+                
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-sm" @onclick="ToggleEditMode"><i class="fa fa-edit pr-2" /> Editar</button>
+                    <a href="/Categorias" class="btn btn-secondary btn-sm"><i class="fa fa-times pr-2" /> Volver</a>
+                    <button type="button" class="btn btn-danger btn-sm float-end" @onclick="(async () => await ShowConfirmationModal())"><i class="fa fa-trash pr-2" /> Eliminar</button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (showConfirmation)
+    {
+        <ConfirmDelete Message="@($"Estas seguro de eliminar los datos de {typeCategoria}?")" OnConfirm="OnConfirmDelete" />
+    }
+</div>

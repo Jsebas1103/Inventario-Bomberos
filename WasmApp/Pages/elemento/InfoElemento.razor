@@ -1,0 +1,104 @@
+﻿@page "/infoElemento/{Id:int}"
+
+@inherits InfoElementoBase
+
+<div class="conteiner d-flex justify-content-center m-0 p-0">
+    @if (isEditMode)
+    {
+        <EditForm Model="@elemento" OnValidSubmit="@HandleOnValidSubmit" class="col-sm-12 col-md-10 col-lg-8 p-0">
+            <DataAnnotationsValidator />
+            <div class="card">
+                <div class="card-header">
+                    <h3>Lista elemento - Detalle: @elemento.nombre</h3>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                    <label for="ID" class="form-label">ID </label>
+                    <InputNumber id="ID" @bind-Value="elemento.id" class="form-control" placeholder="ID" />
+                    <ValidationMessage For="@(() => elemento.id)" />
+                </div>
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre </label>
+                    <InputText id="Nombre" @bind-Value="elemento.nombre" class="form-control" placeholder="Nombre" />
+                    <ValidationMessage For="@(() => elemento.nombre)" />
+                </div>
+                <div class="form-group">
+                    <label for="descripcion" class="form-label"> descripcion </label>
+                    <InputText id="descripcion" @bind-Value="elemento.descripcion" class="form-control" placeholder="descripcion" />
+                    <ValidationMessage For="@(() => elemento.descripcion)" />
+                </div>
+                <div class="form-group">
+                    <label for="estado" class="form-label"> estado </label>
+                    <InputText id="estado" @bind-Value="elemento.estado" class="form-control" placeholder="estado" />
+                    <ValidationMessage For="@(() => elemento.estado)" />
+                </div>
+                <div class="form-group">
+                    <label for="vidaUtil" class="form-label"> vidaUtil </label>
+                    <InputNumber id="vidaUtil" @bind-Value="elemento.vidaUtil" class="form-control" placeholder="vidaUtil" />
+                    <ValidationMessage For="@(() => elemento.vidaUtil)" />
+                </div>
+                <div class="form-group">
+                    <label for="categoria" class="form-label"> categoria </label>
+                    <InputNumber id="categoria" @bind-Value="elemento.idCategoria" class="form-control" placeholder="categoria" />
+                    <ValidationMessage For="@(() => elemento.idCategoria)" />
+                </div>
+                
+                    
+                    <div class="form-group">
+                        <br />
+                        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save pr-2"/> Guardar</button>
+                        <button type="button" class="btn btn-secondary btn-sm" @onclick="ToggleEditMode"><i class="fa fa-times pr-2" /> Volver</button>
+                    </div>
+                </div>
+            </div>
+        </EditForm>
+    }
+    else
+    {
+        <div class="card col-sm-12 col-md-10 col-lg-8 p-0">
+            <div class="card-header">
+                <h3>Lista elementos - Detalle: @elemento.nombre</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="form-label">ID: </label>
+                    <p>@elemento.id</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Nombre: </label>
+                    <p>@elemento.nombre</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">descripcion: </label>
+                    <p>@elemento.descripcion</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">estado: </label>
+                    <p>@elemento.estado</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">vidaUtil: </label>
+                    <p>@elemento.vidaUtil</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">categoria: </label>
+                    <p>@elemento.idCategoria</p>
+                </div>
+                
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-sm" @onclick="ToggleEditMode"><i class="fa fa-edit pr-2" /> Editar</button>
+                    <a href="/elementos" class="btn btn-secondary btn-sm"><i class="fa fa-times pr-2" /> Volver</a>
+                    <button type="button" class="btn btn-danger btn-sm float-end" @onclick="(async () => await ShowConfirmationModal())"><i class="fa fa-trash pr-2" /> Eliminar</button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (showConfirmation)
+    {
+        <ConfirmDelete Message="@($"Estas seguro de eliminar los datos de {nameElemento}?")" OnConfirm="OnConfirmDelete" />
+    }
+</div>

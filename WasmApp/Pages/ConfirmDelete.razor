@@ -1,0 +1,23 @@
+﻿
+<div class="modal" tabindex="-1" style="display:block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmación de Borrado</h5>
+                <button type="button" class="btn-close" @onclick="() => OnConfirm.InvokeAsync(false)"></button>
+            </div>
+            <div class="modal-body">
+                <p>@Message</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" @onclick="() => OnConfirm.InvokeAsync(false)">Cancelar</button>
+                <button type="button" class="btn btn-danger" @onclick="() => OnConfirm.InvokeAsync(true)">Borrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public EventCallback<bool> OnConfirm { get; set; }
+    [Parameter] public string Message { get; set; }
+}
